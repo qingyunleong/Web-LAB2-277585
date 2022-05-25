@@ -1,7 +1,7 @@
 function rememberme() {
 
     var email = document.forms["loginForm"]["idemail"].value;
-    var pass = document.forms["loginForm"]["idpass"].value;
+    var pass = document.forms["loginForm"]["idpassword"].value;
     var rememberme = document.forms["loginForm"]["idremember"].checked;
 
     console.log("Form data:" + email + "," + pass + "," + rememberme);
@@ -11,7 +11,7 @@ function rememberme() {
         setCookies("cpass", "", 0);
         setCookies("crem", false, 0);
         document.forms["loginForm"]["idemail"].value = "";
-        document.forms["loginForm"]["idpass"].value = "";
+        document.forms["loginForm"]["idpassword"].value = "";
         document.forms["loginForm"]["idremember"].checked = false;
         alert("Credentials removed");
 
@@ -44,7 +44,7 @@ function loadCookies() {
     console.log("COOKIES:" + username, password, rememberme);
 
     document.forms["loginForm"]["idemail"].value = username;
-    document.forms["loginForm"]["idpass"].value = password;
+    document.forms["loginForm"]["idpassword"].value = password;
 
     if (rememberme) {
         document.forms["loginForm"]["idremember"].checked = true;
