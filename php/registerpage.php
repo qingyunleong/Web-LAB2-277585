@@ -47,13 +47,20 @@ function uploadImage($id)
     <script src="../js/script.js"></script>
     <script src="../js/register.js"></script>
     <title>Register Page</title>
-
 </head>
 
 <body>
 
     <header class="w3-header w3-center">
-        <img src="../res/background.png" style="width:100%">
+        <div class="mySlides w3-display-container w3-center">
+            <img src="../res/background.png" style="width:100%">
+        </div>
+        <div class="mySlides w3-display-container w3-center">
+            <img src="../res/2.png" style="width:100%">
+        </div>
+        <div class="mySlides w3-display-container w3-center">
+            <img src="../res/3.png" style="width:100%">
+        </div>
     </header>
 
     <div style="display:flex; justify-content:center">
@@ -128,8 +135,32 @@ function uploadImage($id)
 
 
     <footer class="w3-footer w3-center w3-margin-bottom" style="background-color: #133764 ; color:white">
+        <p>Find me on social media.</p>
+
+        <a href="https://www.facebook.com/qingyunleong" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a href="https://www.instagram.com/qingyunleong" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <a href="https://github.com/qingyunleong" target="_blank"><i class="fa fa-git w3-hover-opacity"></i></a>
         <p>Copyright MyTutor&copy;</p>
     </footer>
+
+    <script>
+        var myIndex = 0;
+        header();
+
+        function header() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(header, 3500);
+        }
+    </script>
 
 </body>
 

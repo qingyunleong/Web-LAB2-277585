@@ -1,12 +1,22 @@
-.form-container-reg {
-    max-width: 600px;
-    margin: auto;
-}
+ .mySlides {
+     display: none
+ }
 
-body, h1, h2, h3, h4, h5, h6 {
-    font-family: "Karma", sans-serif 
-}
+ .form-container-reg {
+     max-width: 600px;
+     margin: auto;
+ }
 
-.w3-bar-block .w3-bar-item {
-    padding: 20px 
-}
+ body,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6 {
+     font-family: "Karma", sans-serif
+ }
+
+ .w3-bar-block .w3-bar-item {
+     padding: 20px
+ }
